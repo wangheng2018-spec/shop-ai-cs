@@ -162,7 +162,7 @@ def chat_with_ai(user_msg, context_list):
     ]
     resp = requests.post(
         API_URL,
-        headers={"Authorization": "***" + API_KEY, "Content-Type": "application/json"},
+        headers={"Authorization": "Bearer " + API_KEY, "Content-Type": "application/json"},
         json={"model": MODEL, "messages": messages, "temperature": 0.6, "max_tokens": 500},
         timeout=30,
     )
